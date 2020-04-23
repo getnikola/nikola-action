@@ -1,0 +1,6 @@
+# action.yml
+name: 'Deploy to GH Pages'
+description: 'Build the site using Nikola and deploy to GH Pages'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
