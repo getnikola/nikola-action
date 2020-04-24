@@ -2,11 +2,17 @@
 
 This GitHub Action can build and deploy a Nikola website.
 
+Current version: getnikola/nikola-action@v2
+
 # Usage
 
+Full tutorial on the Nikola blog: [Automating Nikola rebuilds with GitHub Actions](https://getnikola.com/blog/automating-nikola-rebuilds-with-github-actions.html)
+
+Short version:
+
 1. Create a repository with a Nikola site.
-2. Configure [nikola github_deploy](https://getnikola.com/handbook.html#deploying-to-github). It’s best to do your first deployment from your local machine.
-3. Ensure the correct branch for deployment is set on GitHub. Refer to [this guide](https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-first-deployment-with-github_token).
+2. Configure [nikola github_deploy](https://getnikola.com/handbook.html#deploying-to-github). Build and deploy your site locally first.
+3. Ensure the correct branch for deployment is set on GitHub (repository settings). Refer to [this guide](https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-first-deployment-with-github_token).
 4. Create a `.github/workflows/main.yml` file with the Sample Workflow.
 
 ## Sample Workflow
@@ -22,7 +28,7 @@ jobs:
     - name: Check out
       uses: actions/checkout@v2
     - name: Build and Deploy Nikola
-      uses: getnikola/nikola-action@v1
+      uses: getnikola/nikola-action@v2
 ```
 
 ## Extras
