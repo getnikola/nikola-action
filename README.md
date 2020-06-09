@@ -2,7 +2,7 @@
 
 This GitHub Action can build and deploy a Nikola website.
 
-Current version: getnikola/nikola-action@v2
+Current version: getnikola/nikola-action@v3
 
 # Usage
 
