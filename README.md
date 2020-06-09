@@ -29,7 +29,13 @@ jobs:
       uses: actions/checkout@v2
     - name: Build and Deploy Nikola
       uses: getnikola/nikola-action@v2
+      with:
+        dry_run: false
 ```
+
+## Options
+
+- `dry_run` - if set to `true` only page build is performed, deploy is skipped
 
 ## Extras
 
