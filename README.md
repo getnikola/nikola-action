@@ -28,7 +28,7 @@ jobs:
     - name: Check out
       uses: actions/checkout@v2
     - name: Build and Deploy Nikola
-      uses: getnikola/nikola-action@v2
+      uses: getnikola/nikola-action@v3
       with:
         dry_run: false
 ```
