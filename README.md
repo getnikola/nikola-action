@@ -2,7 +2,7 @@
 
 This GitHub Action can build and deploy a Nikola website.
 
-Current version: getnikola/nikola-action@v3
+Current version: getnikola/nikola-action@v4
 
 # Usage
 
@@ -28,7 +28,7 @@ jobs:
     - name: Check out
       uses: actions/checkout@v2
     - name: Build and Deploy Nikola
-      uses: getnikola/nikola-action@v3
+      uses: getnikola/nikola-action@v4
       with:
         dry_run: false
 ```
