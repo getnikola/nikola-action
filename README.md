@@ -40,3 +40,19 @@ jobs:
 ## Extras
 
 By default, the action will install the latest stable release of `Nikola[extras]`. If you want to use the bleeding-edge version from `master`, or want to install some extra dependencies, you can provide a `requirements.txt` file in the repository.
+
+## Caveats
+
+The action will attempt to `import conf` before installing Nikola or your requirements. If your `conf.py` has any imports outside of stdlib, you need to wrap those with a `try-except` block. For example, if you want to use filters, your `conf.py` should have this:
+
+```py
+try:
+    from nikola import filters
+    FILTERS = {
+        ".html": [filters.typogrify],
+        ".js": [filters.closure_compiler],
+        ".jpg": ["jpegoptim --strip-all -m75 -v %s"],
+    }
+except ImportError:
+    FILTERS = {}
+  ```
