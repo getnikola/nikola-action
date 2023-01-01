@@ -11,3 +11,7 @@ inputs:
     description: 'Build without publishing code'
     default: false
     required: false
+  apt_install:
+    descrption: 'Extra APT packages to install from Ubuntu 20.04 repositories, space-separated'
+    default: ''
+    required: false

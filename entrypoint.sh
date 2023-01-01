@@ -1,6 +1,7 @@
 #!/bin/bash
 
 : "${INPUT_DRY_RUN:=false}"
+: "${INPUT_APT_INSTALL:=''}"
 
 set -e
 
@@ -30,6 +31,12 @@ if [[ -f "requirements.txt" ]]; then
     pip install -r requirements.txt ghp-import
 else
     pip install "Nikola[extras]"
+fi
+
+if [ -n "${INPUT_APT_INSTALL}" ]; then
+    apt-get update
+    apt-get install -y ${INPUT_APT_INSTALL}
+    apt-get clean
 fi
 
 echo "==> Building site..."
