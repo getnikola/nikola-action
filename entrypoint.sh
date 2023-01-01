@@ -35,7 +35,7 @@ fi
 
 if [ -n "${INPUT_APT_INSTALL}" ]; then
     apt-get update
-    apt-get install ${INPUT_APT_INSTALL}
+    apt-get install -y ${INPUT_APT_INSTALL}
     apt-get clean
 fi
 
