@@ -33,7 +33,7 @@ else
     pip install "Nikola[extras]"
 fi
 
-if [ -n "${INPUT_APT_INSTALL}"]; then
+if [ -n "${INPUT_APT_INSTALL}" ]; then
     apt-get update
     apt-get install ${INPUT_APT_INSTALL}
     apt-get clean
