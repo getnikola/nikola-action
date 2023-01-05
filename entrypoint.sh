@@ -1,7 +1,6 @@
 #!/bin/bash
 
 : "${INPUT_DRY_RUN:=false}"
-: "${INPUT_APT_INSTALL:=''}"
 
 set -e
 
